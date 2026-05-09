@@ -282,28 +282,21 @@
     }
 
     setInterval(createHeart, 500);
-  </script>
-  });
-</script>
+ 
+  <audio id="bg-music" loop>
+    <source src="music/song.mp3" type="audio/mpeg">
+  </audio>
 
-</body> <audio id="bg-music" loop>
-  <source song.mp3 ≠ Song.mp3 ≠ SONG.MP3 type="audio/mpeg">
-</audio>
-</html>
-<script>
-  window.addEventListener("click", function () {
-    document.getElementById("bg-music").play();
-  });
-</script><script>
-  window.addEventListener("load", () => {
-    const audio = document.getElementById("bg-music");
-
-    audio.play().catch(() => {
-      console.log("Autoplay blocked by browser");
+  <script>
+    window.addEventListener("load", () => {
+      const audio = document.getElementById("bg-music");
+      audio.play().catch(() => {});
     });
-  });
 
-  document.addEventListener("click", () => {
-    document.getElementById("bg-music").play();
-  });
-</script>
+    document.addEventListener("click", () => {
+      document.getElementById("bg-music").play();
+    });
+  </script>
+
+</body>
+</html>
