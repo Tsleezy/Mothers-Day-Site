@@ -282,7 +282,13 @@
     }
 
     setInterval(createHeart, 500);
-  </script>
+  </script><script>
+  window.addEventListener("click", function () {
+    document.getElementById("bg-music").play();
+  });
+</script>
 
-</body>
+</body> <audio id="bg-music" autoplay loop>
+  <source src="music/song.mp3" type="audio/mpeg">
+</audio>
 </html>
