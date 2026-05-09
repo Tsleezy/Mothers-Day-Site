@@ -109,7 +109,7 @@
 
   <div class="hero">
     <h1>Happy Mother's Day ❤️</h1>
-    <p>Tap flip, then redeem your coupons</p>
+    <p>Flip and redeem your coupons</p>
   </div>
 
   <div class="coupon-grid">
@@ -144,23 +144,11 @@
 
 </div>
 
-<!-- MUSIC -->
-<audio id="bg-music" loop>
-  <source src="music/song.mp3" type="audio/mpeg">
-</audio>
-
-<!-- CONFETTI LIBRARY -->
+<!-- CONFETTI -->
 <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 
 <script>
-  const music = document.getElementById("bg-music");
-
-  // start music after first tap (browser rule)
-  document.addEventListener("click", () => {
-    music.play().catch(() => {});
-  }, { once: true });
-
-  // FLIP
+  // FLIP FUNCTION
   document.querySelectorAll(".flip").forEach(btn => {
     btn.addEventListener("click", (e) => {
       const card = e.target.closest(".coupon");
